@@ -11,7 +11,9 @@ const client = new Stainlessdeepl({
 describe('resource documents', () => {
   test('create: only required params', async () => {
     const responsePromise = client.documents.create({
-      file: await toFile(Buffer.from('# my file contents'), 'README.md'),
+      //file: await toFile(Buffer.from('# my file contents'), 'README.md'),
+      file: await toFile(Buffer.from('{"text":["This is the first sentence.","This is the second sentence.","This is the third sentence."],"target_lang":"DE"}'), 'README.md'),
+
       target_lang: 'BG',
     });
     const rawResponse = await responsePromise.asResponse();
