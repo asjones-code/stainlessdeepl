@@ -4,8 +4,8 @@ import Stainlessdeepl, { toFile } from 'stainlessdeepl';
 import { Response } from 'node-fetch';
 
 const client = new Stainlessdeepl({
-  authKey: 'My Auth Key',
-  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+  authKey: '4dbac1ee-605a-450e-93f6-be6c6c9d209a:fx',
+  baseURL: process.env['TEST_API_BASE_URL'] ?? 'https://api.deepl.com/v2/translate',
 });
 
 describe('resource documents', () => {
