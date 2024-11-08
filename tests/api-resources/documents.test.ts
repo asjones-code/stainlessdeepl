@@ -4,7 +4,7 @@ import Stainlessdeepl, { toFile } from 'stainlessdeepl';
 import { Response } from 'node-fetch';
 
 const client = new Stainlessdeepl({
-  authKey: 'DeepL-Auth-Key 4dbac1ee-605a-450e-93f6-be6c6c9d209a:fx',
+  authKey: '4dbac1ee-605a-450e-93f6-be6c6c9d209a:fx',
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'https://api-free.deepl.com/v2/translate',
 });
 
