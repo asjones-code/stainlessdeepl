@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import FormData from 'form-data';
 
 // Define the API key (replace 'YOUR_API_KEY' with your actual key)
-const openai = new OpenAI({ apiKey: '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' });
+const openai = new OpenAI({ apiKey: process.env.opapi });
 const audioUrl = "https://aod-rfi.akamaized.net/rfi/francais/audio/modules/actu/202411/02_11_Menaces_sur_l_info_Walid_Bourouis.mp3";
 
 async function transcribeAudio() {
