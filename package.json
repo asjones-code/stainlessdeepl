@@ -1,6 +1,6 @@
 {
   "name": "stainlessdeepl",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "The official TypeScript library for the Stainlessdeepl API",
   "author": "Stainlessdeepl <dev-feedback@stainlessdeepl.com>",
   "types": "dist/index.d.ts",
