@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2024-11-12)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/asjones-code/stainlessdeepl/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* rebuild project due to codegen change ([#8](https://github.com/asjones-code/stainlessdeepl/issues/8)) ([de2c9d0](https://github.com/asjones-code/stainlessdeepl/commit/de2c9d02dc4371ba19dcb49e8ac62840de16ab8e))
+
 ## 0.1.0-alpha.1 (2024-11-08)
 
 Full Changelog: [v0.0.1-alpha.1...v0.1.0-alpha.1](https://github.com/asjones-code/stainlessdeepl/compare/v0.0.1-alpha.1...v0.1.0-alpha.1)
