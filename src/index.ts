@@ -32,7 +32,6 @@ const environments = {
   environment_1: 'https://api-free.deepl.com/v2',
 };
 type Environment = keyof typeof environments;
-
 export interface ClientOptions {
   /**
    * Authentication key for accessing DeepL API services
@@ -205,31 +204,11 @@ export class Stainlessdeepl extends Core.APIClient {
   static fileFromPath = Uploads.fileFromPath;
 }
 
-export {
-  StainlessdeeplError,
-  APIError,
-  APIConnectionError,
-  APIConnectionTimeoutError,
-  APIUserAbortError,
-  NotFoundError,
-  ConflictError,
-  RateLimitError,
-  BadRequestError,
-  AuthenticationError,
-  InternalServerError,
-  PermissionDeniedError,
-  UnprocessableEntityError,
-} from './error';
-
-export import toFile = Uploads.toFile;
-export import fileFromPath = Uploads.fileFromPath;
-
 Stainlessdeepl.Translations = Translations;
 Stainlessdeepl.Documents = Documents;
 Stainlessdeepl.GlossaryLanguagePairs = GlossaryLanguagePairs;
 Stainlessdeepl.Glossaries = Glossaries;
 Stainlessdeepl.MetaInformations = MetaInformations;
-
 export declare namespace Stainlessdeepl {
   export type RequestOptions = Core.RequestOptions;
 
@@ -262,5 +241,22 @@ export declare namespace Stainlessdeepl {
 
   export { MetaInformations as MetaInformations };
 }
+
+export { toFile, fileFromPath } from 'stainlessdeepl/uploads';
+export {
+  StainlessdeeplError,
+  APIError,
+  APIConnectionError,
+  APIConnectionTimeoutError,
+  APIUserAbortError,
+  NotFoundError,
+  ConflictError,
+  RateLimitError,
+  BadRequestError,
+  AuthenticationError,
+  InternalServerError,
+  PermissionDeniedError,
+  UnprocessableEntityError,
+} from 'stainlessdeepl/error';
 
 export default Stainlessdeepl;
