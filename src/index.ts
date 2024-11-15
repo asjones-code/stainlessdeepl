@@ -242,7 +242,7 @@ export declare namespace Stainlessdeepl {
   export { MetaInformations as MetaInformations };
 }
 
-export { toFile, fileFromPath } from 'stainlessdeepl/uploads';
+export { toFile, fileFromPath } from './uploads';
 export {
   StainlessdeeplError,
   APIError,
@@ -257,6 +257,6 @@ export {
   InternalServerError,
   PermissionDeniedError,
   UnprocessableEntityError,
-} from 'stainlessdeepl/error';
+} from './error';
 
 export default Stainlessdeepl;
