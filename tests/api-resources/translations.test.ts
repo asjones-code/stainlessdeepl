@@ -10,10 +10,7 @@ const client = new Stainlessdeepl({
 
 describe('resource translations', () => {
   test('translate: only required params', async () => {
-    const responsePromise = client.translations.translate({
-      target_lang: 'AR',
-      text: ['Hello, World!', 'Hello, World!', 'Hello, World!'],
-    });
+    const responsePromise = client.translations.translate({ target_lang: 'AR', text: ['Hello, World!'] });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -26,7 +23,7 @@ describe('resource translations', () => {
   test('translate: required and optional params', async () => {
     const response = await client.translations.translate({
       target_lang: 'AR',
-      text: ['Hello, World!', 'Hello, World!', 'Hello, World!'],
+      text: ['Hello, World!'],
       context: 'context',
       formality: 'default',
       glossary_id: {},
