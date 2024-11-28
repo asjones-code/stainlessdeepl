@@ -27,7 +27,7 @@ const client = new Stainlessdeepl({
 });
 
 async function main() {
-  const response = await client.translations.translate({ target_lang: 'REPLACE_ME', text: [] });
+  const response = await client.translations.translate({ target_lang: 'REPLACE_ME', text: null });
 
   console.log(response.translations);
 }
@@ -48,7 +48,7 @@ const client = new Stainlessdeepl({
 });
 
 async function main() {
-  const params: Stainlessdeepl.TranslationTranslateParams = { target_lang: 'REPLACE_ME', text: [] };
+  const params: Stainlessdeepl.TranslationTranslateParams = { target_lang: 'REPLACE_ME', text: null };
   const response: Stainlessdeepl.TranslationTranslateResponse = await client.translations.translate(params);
 }
 
@@ -67,7 +67,7 @@ a subclass of `APIError` will be thrown:
 ```ts
 async function main() {
   const response = await client.translations
-    .translate({ target_lang: 'REPLACE_ME', text: [] })
+    .translate({ target_lang: 'REPLACE_ME', text: null })
     .catch(async (err) => {
       if (err instanceof Stainlessdeepl.APIError) {
         console.log(err.status); // 400
@@ -111,7 +111,7 @@ const client = new Stainlessdeepl({
 });
 
 // Or, configure per-request:
-await client.translations.translate({ target_lang: 'REPLACE_ME', text: [] }, {
+await client.translations.translate({ target_lang: 'REPLACE_ME', text: null }, {
   maxRetries: 5,
 });
 ```
@@ -128,7 +128,7 @@ const client = new Stainlessdeepl({
 });
 
 // Override per-request:
-await client.translations.translate({ target_lang: 'REPLACE_ME', text: [] }, {
+await client.translations.translate({ target_lang: 'REPLACE_ME', text: null }, {
   timeout: 5 * 1000,
 });
 ```
@@ -149,12 +149,12 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 ```ts
 const client = new Stainlessdeepl();
 
-const response = await client.translations.translate({ target_lang: 'REPLACE_ME', text: [] }).asResponse();
+const response = await client.translations.translate({ target_lang: 'REPLACE_ME', text: null }).asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
 const { data: response, response: raw } = await client.translations
-  .translate({ target_lang: 'REPLACE_ME', text: [] })
+  .translate({ target_lang: 'REPLACE_ME', text: null })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(response.translations);
@@ -262,7 +262,7 @@ const client = new Stainlessdeepl({
 
 // Override per-request:
 await client.translations.translate(
-  { target_lang: 'REPLACE_ME', text: [] },
+  { target_lang: 'REPLACE_ME', text: null },
   {
     httpAgent: new http.Agent({ keepAlive: false }),
   },
